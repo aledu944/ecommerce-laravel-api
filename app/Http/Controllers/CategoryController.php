@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\NewCategoryRequest;
 use App\Http\Resources\CategoryCollection;
+use App\Http\Resources\CategoryResource;
 use App\Models\Category;
 use Illuminate\Http\Request;
 
@@ -20,22 +21,30 @@ class CategoryController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(NewCategoryRequest $request)
-    {
-        $request->validated();
+    // public function store(NewCategoryRequest $request)
+    // {
+    //     $request->validated();
         
-        $request['slug'] = $this->createSlug($request['name']);
-        $category = Category::create($request->all());
+    //     $request['slug'] = $this->createSlug($request['name']);
+    //     $category = Category::create($request->all());
         
-        return $category;
-    }
+    //     return $category;
+    // }
 
     /**
      * Display the specified resource.
      */
-    public function show(string $id)
+    public function show(string $term)
     {
-        //
+        $category = Category::where('id',$term)
+            ->orWhere('slug',$term)
+            ->get();
+
+        if( !$category ){
+            return response(['message' => 'La categoria no existe'], 404);
+        }
+
+        return new CategoryResource( $category[0] );
     }
 
     /**
@@ -46,13 +55,6 @@ class CategoryController extends Controller
         //
     }
 
-    /**
-     * Remove the specified resource from storage.
-     */
-    public function destroy(string $id)
-    {
-        //
-    }
     private function createSlug($text) {
         $text = strtolower($text); // Convertir a minúsculas
         $text = preg_replace('/[^a-z0-9]+/', '_', $text); // Eliminar caracteres especiales
