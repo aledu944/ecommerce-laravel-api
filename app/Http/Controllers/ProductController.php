@@ -18,12 +18,19 @@ class ProductController extends Controller
     public function index(Request $request)
     {
         $query = $request->query('category');
-
-        if( !$query ){
-            return new ProductCollection(Product::all());
+        
+        if( $query ){
+            $products = Category::with('products')->get();
+            return  new ProductCategoryCollection( $products );
         }
-        $products = Category::with('products')->get();
-        return  new ProductCategoryCollection( $products );
+
+        $search = $request->query('search');
+        if( $search ){
+            return new ProductCollection(Product::where('name', 'LIKE', '%'.$search.'%')->get());
+        }
+
+        return new ProductCollection(Product::all());
+
     }
 
     /**
