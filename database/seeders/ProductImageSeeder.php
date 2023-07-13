@@ -15,53 +15,105 @@ class ProductImageSeeder extends Seeder
     public function run(): void
     {
         DB::table('product_images')->insert([
-            'product_id' => "6f8d88b5-d8c2-4d83-88df-bfa95d2c61b4",
-            'url'      => "/storage/products/ps5-2.webp",
+            'product_id' => "07d03660-a54c-4fd5-8ab8-d34ce637c867",
+            'url'      => "/storage/products/play-station-5-1.webp",
             'created_at' => Carbon::now(),
             'updated_at' => Carbon::now()
         ]);
         DB::table('product_images')->insert([
-            'product_id' => "6f8d88b5-d8c2-4d83-88df-bfa95d2c61b4",
-            'url'      => "/storage/products/ps5-1.webp",
-            'created_at' => Carbon::now(),
-            'updated_at' => Carbon::now()
-        ]);
-
-        DB::table('product_images')->insert([
-            'product_id' => "77cbe620-45e0-40e6-a601-06666ddbc9a8",
-            'url'      => "/storage/products/headphones-c-1.webp",
-            'created_at' => Carbon::now(),
-            'updated_at' => Carbon::now()
-        ]);
-        DB::table('product_images')->insert([
-            'product_id' => "77cbe620-45e0-40e6-a601-06666ddbc9a8",
-            'url'      => "/storage/products/headphones-c-2.webp",
+            'product_id' => "07d03660-a54c-4fd5-8ab8-d34ce637c867",
+            'url'      => "/storage/products/play-station-5-2.webp",
             'created_at' => Carbon::now(),
             'updated_at' => Carbon::now()
         ]);
 
         DB::table('product_images')->insert([
-            'product_id' => "b2a284d7-94f6-456c-acac-2556c6669aec",
-            'url'      => "/storage/products/ps4_slim-1.webp",
-            'created_at' => Carbon::now(),
-            'updated_at' => Carbon::now()
-        ]);
-        DB::table('product_images')->insert([
-            'product_id' => "b2a284d7-94f6-456c-acac-2556c6669aec",
-            'url'      => "/storage/products/ps4_slim-2.webp",
+            'product_id' => "7eb79d7e-3bba-4a3f-9974-e50d1a661c68",
+            'url'      => "/storage/products/macbook-pro-m2-1.webp",
             'created_at' => Carbon::now(),
             'updated_at' => Carbon::now()
         ]);
 
         DB::table('product_images')->insert([
-            'product_id' => "d9de791c-e50d-4a22-a8a3-963e04fdc074",
-            'url'      => "/storage/products/earphones_b_1.webp",
+            'product_id' => "7eb79d7e-3bba-4a3f-9974-e50d1a661c68",
+            'url'      => "/storage/products/macbook-pro-m2-2.webp",
             'created_at' => Carbon::now(),
             'updated_at' => Carbon::now()
         ]);
+
         DB::table('product_images')->insert([
-            'product_id' => "d9de791c-e50d-4a22-a8a3-963e04fdc074",
-            'url'      => "/storage/products/earphones_b_2.webp",
+            'product_id' => "7eb79d7e-3bba-4a3f-9974-e50d1a661c68",
+            'url'      => "/storage/products/macbook-pro-m2-3.webp",
+            'created_at' => Carbon::now(),
+            'updated_at' => Carbon::now()
+        ]);
+
+        DB::table('product_images')->insert([
+            'product_id' => "872b0f16-32b9-426d-9bce-1073a73ca969",
+            'url'      => "/storage/products/iphone-14-1.webp",
+            'created_at' => Carbon::now(),
+            'updated_at' => Carbon::now()
+        ]);
+
+        DB::table('product_images')->insert([
+            'product_id' => "872b0f16-32b9-426d-9bce-1073a73ca969",
+            'url'      => "/storage/products/iphone-14-2.webp",
+            'created_at' => Carbon::now(),
+            'updated_at' => Carbon::now()
+        ]);
+
+        DB::table('product_images')->insert([
+            'product_id' => "9160d376-f4af-4b51-b484-c98b9a3343b9",
+            'url'      => "/storage/products/iphone-14-pro-max-1.webp",
+            'created_at' => Carbon::now(),
+            'updated_at' => Carbon::now()
+        ]);
+
+        DB::table('product_images')->insert([
+            'product_id' => "9160d376-f4af-4b51-b484-c98b9a3343b9",
+            'url'      => "/storage/products/iphone-14-pro-max-2.webp",
+            'created_at' => Carbon::now(),
+            'updated_at' => Carbon::now()
+        ]);
+
+        DB::table('product_images')->insert([
+            'product_id' => "d7a940a1-1db2-4835-ad1e-ab296e6d6a8e",
+            'url'      => "/storage/products/airpods-1.webp",
+            'created_at' => Carbon::now(),
+            'updated_at' => Carbon::now()
+        ]);
+
+        DB::table('product_images')->insert([
+            'product_id' => "d7a940a1-1db2-4835-ad1e-ab296e6d6a8e",
+            'url'      => "/storage/products/airpods-2.webp",
+            'created_at' => Carbon::now(),
+            'updated_at' => Carbon::now()
+        ]);
+
+        DB::table('product_images')->insert([
+            'product_id' => "d7a940a1-1db2-4835-ad1e-ab296e6d6a8e",
+            'url'      => "/storage/products/airpods-3.webp",
+            'created_at' => Carbon::now(),
+            'updated_at' => Carbon::now()
+        ]);
+
+        DB::table('product_images')->insert([
+            'product_id' => "fae7143c-ddf8-4396-9f0f-f3f7c2fb5c66",
+            'url'      => "/storage/products/samsung-s23-plus-1.webp",
+            'created_at' => Carbon::now(),
+            'updated_at' => Carbon::now()
+        ]);
+
+        DB::table('product_images')->insert([
+            'product_id' => "fae7143c-ddf8-4396-9f0f-f3f7c2fb5c66",
+            'url'      => "/storage/products/samsung-s23-plus-2.webp",
+            'created_at' => Carbon::now(),
+            'updated_at' => Carbon::now()
+        ]);
+
+        DB::table('product_images')->insert([
+            'product_id' => "fae7143c-ddf8-4396-9f0f-f3f7c2fb5c66",
+            'url'      => "/storage/products/samsung-s23-plus-3.webp",
             'created_at' => Carbon::now(),
             'updated_at' => Carbon::now()
         ]);
