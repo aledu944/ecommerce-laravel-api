@@ -10,23 +10,23 @@ Is open to support or collaboration.
 ## Products
 ### Get all products
 
-```http
+```https
 https://store.innovacode.online/api/products
 ```
 
 ### Get product by id
-```http
+```https
 https://store.innovacode.online/api/products/id
 ```
 
 ### Get product by slug
-```http
+```https
 https://store.innovacode.online/api/products/slug
 ```
 
 
 ### Search products
-```http
+```https
 https://store.innovacode.online/api/products?search=query
 ```
 
