@@ -30,7 +30,7 @@ class ProductController extends Controller
         }
 
         return new ProductCollection(Product::all());
-
+        
     }
 
     /**

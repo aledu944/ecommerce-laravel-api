@@ -21,30 +21,31 @@ class CategoryController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    // public function store(NewCategoryRequest $request)
-    // {
-    //     $request->validated();
+    public function store(NewCategoryRequest $request)
+    {
+        $request->validated();
         
-    //     $request['slug'] = $this->createSlug($request['name']);
-    //     $category = Category::create($request->all());
+        $request['slug'] = $this->createSlug($request['name']);
+        $category = Category::create($request->all());
         
-    //     return $category;
-    // }
+        return $category;
+    }
 
     /**
      * Display the specified resource.
      */
     public function show(string $term)
     {
-        $category = Category::where('id',$term)
+        $category = Category::with('products')
+            ->where('id',$term)
             ->orWhere('slug',$term)
             ->get();
-
+        
         if( !$category ){
             return response(['message' => 'La categoria no existe'], 404);
-        }
+        }   
 
-        return new CategoryResource( $category[0] );
+        return response()->json($category);
     }
 
     /**
